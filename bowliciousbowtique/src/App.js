@@ -32,13 +32,26 @@ export default class App extends Component {
   }
 
   handleLogOut = () => {
+    // switched this axios method to a fetch to include credentials
+    // withCredentials: true wasnt working for some reason
+    //ALSO as you said, rails as API can not run session
+    //I changed the config/application.rb to have 
+    //  config.api_only = false
+    //instead of   config.api_only = true
     console.log("logout function")
-    axios.post("http://localhost:3000/logout", { withCredentials: true })
-      .then(res => console.log(res))
-    this.setState({
-      loggedInStatus: "NOT_LOGGED_IN",
-      user: {}
-    })
+    fetch("http://localhost:3000/logout",{
+        method: 'POST',
+        credentials: 'include'
+      })
+      .then(res => {
+        console.log(res)
+      })
+      .then(resp => {
+        this.setState({
+          loggedInStatus: "NOT_LOGGED_IN",
+          user: {}
+        })
+      })
   }
 
   checkLoginStatus = () => {
@@ -50,7 +63,7 @@ export default class App extends Component {
             loggedInStatus: "LOGGED_IN",
             user: response.data.user
           })
-        } else if (!response.data.logged_in & this.state.loggedInStatus === "LOGGED_IN") {
+        } else if (!response.data.logged_in && this.state.loggedInStatus === "LOGGED_IN") {
           this.setState({
             loggedInStatus: "NOT_LOGGED_IN",
             user: {}
