@@ -17,9 +17,9 @@ class SessionsController < ApplicationController
     end 
 
     def logged_in
-    
-        user = User.find_by(session[:user_id])
-        if user
+        # byebug
+        if session[:user_id]
+            user = User.find(session[:user_id])
             render json: {
                 logged_in: true,
                 user: user
@@ -32,8 +32,9 @@ class SessionsController < ApplicationController
     end
 
     def logout
-        byebug
+        # byebug
         session.clear
+        session[:user_id] = nil
         render json: { status: 200, logged_out: true, session: session }
     end
 end 
