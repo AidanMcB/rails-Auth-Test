@@ -1,0 +1,39 @@
+default: &default
+  adapter: sqlite3
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+
+development:
+  <<: *default
+  database: db/development.sqlite3
+
+test:
+  <<: *default
+  database: db/test.sqlite3
+
+production:
+  <<: *default
+  database: db/production.sqlite3
+
+
+# BELOW IS EXACTLY WHAT NEEDS TO BE HERE FOR PRODUCTION. ABOVE THIS LINE IS FOR DEVELOPMENT
+
+# default: &default
+#   adapter: postgresql
+#   encoding: unicode
+#   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+# development:
+#   <<: *default
+#   database: bowlicious_backend_development
+
+# test:
+#   <<: *default
+#   database: bowlicious_backend_test
+
+
+# production:
+#   <<: *default
+#   database: bowlicious_backend_production
+#   username: bowlicious_backend
+#   password: <%= ENV['BOWLICIOUS_BACKEND_DATABASE_PASSWORD'] %>

@@ -1,0 +1,275 @@
+:root {
+    --mainBlue: #2a2a72;
+    --lightBlue: #009ffd;
+    --mainWhite: #f3f3f3;
+    --brandGrey: rgb(70, 70, 70);
+    --mainDark: #232528;
+    --mainYellow: #ffa400;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.anieka {
+    border-radius: 50%;
+}
+
+body {
+    font-family: 'Playfair Display', serif !important;
+    height: 100% !important;
+    background: var(--mainWhite) !important
+}
+
+.brand-text {
+    font-family: 'Niconne', cursive;
+    color: var(--brandGrey);
+    font-size: 2rem!important;
+    font-weight: bold!important;
+}
+
+.buttons {
+    float: right;
+}
+
+.btn-outline-success {
+    color: black !important;
+    border: 1px solid pink !important;
+    border-color: pink !important;
+}
+
+.push-right {
+    margin-left: 20px !important;
+}
+
+.btn-outline-success:hover {
+    color: white !important;
+    background-color: pink !important;
+    border: 2px inset solid pink !important;
+}
+
+.btn-outline-success:focus {
+    box-shadow: none !important;
+}
+
+.btn-outline-warning {
+    color: black!important;
+}
+
+.create {
+    padding-top: 0 !important;
+    padding-bottom: 2rem !important;
+}
+
+.cart-btn {
+    border: 1px solid orange;
+    border-radius: 5px;
+    padding: 1%;
+}
+
+.pink {
+    background-color: pink !important;
+}
+
+.pink-btn {
+    background-color: pink !important;
+    border: 1px solid pink !important;
+}
+
+.pink-btn:hover {
+    background-color: rgb(226, 166, 176) !important;
+    border: 2px inset solid pink !important;
+}
+
+.pink-icon {
+    color: pink;
+}
+
+ul {
+    list-style-type: none !important;
+    overflow: hidden !important;
+}
+
+.login {
+    padding-left: 2%;
+}
+
+.signup {
+    padding-left: 2%;
+}
+
+li {
+    float: left !important;
+}
+
+li a {
+    display: block;
+}
+
+.links {
+    color: rgb(0, 72, 114);
+}
+
+.section-bg-dark {
+    background-color: lightgrey;
+}
+
+span.form {
+    margin-top: 0!important;
+}
+
+.site-logo {
+    width: 10%!important;
+    margin: 0!important;
+}
+
+.sticky {
+    position: fixed;
+}
+
+.title-text {
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+}
+
+/* COMMENTS SECTION CSS BELOW */
+
+.card-white .card-heading {
+    color: #333;
+    background-color: #fff;
+    border-color: #ddd;
+    border: 1px solid #dddddd;
+}
+
+.comments {
+    margin-left: 18% !important;
+    margin-right: 18% !important;
+}
+
+.commentLeave {
+    padding-top: 0 !important;
+}
+
+.card-white  .card-footer {
+    background-color: #fff;
+    border-color: #ddd;
+}
+
+.card-white .h5 {
+    font-size:14px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.card-white .time {
+    font-size:12px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.post .post-heading {
+    height: 95px;
+    padding: 20px 15px;
+}
+
+.post .post-heading .avatar {
+    width: 60px;
+    height: 60px;
+    display: block;
+    margin-right: 15px;
+}
+
+.post .post-heading .meta .title {
+    margin-bottom: 0;
+}
+
+.post .post-heading .meta .title a {
+    color: black;
+}
+
+.post .post-heading .meta .title a:hover {
+    color: #aaaaaa;
+}
+
+.post .post-heading .meta .time {
+    margin-top: 8px;
+    color: #999;
+}
+
+.post .post-image .image {
+    width: 100%;
+    height: auto;
+}
+
+.post .post-description {
+    padding: 15px;
+}
+
+.post .post-description p {
+    font-size: 14px;
+}
+
+.post .post-description .stats {
+    margin-top: 20px;
+}
+
+.post .post-description .stats .stat-item {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.post .post-description .stats .stat-item .icon {
+    margin-right: 8px;
+}
+
+.post .post-footer {
+    border-top: 1px solid #ddd;
+    padding: 15px;
+}
+
+.post .post-footer .input-group-addon a {
+    color: #454545;
+}
+
+.post .post-footer .comments-list {
+    padding: 0;
+    margin-top: 20px;
+    list-style-type: none;
+}
+
+.post .post-footer .comments-list .comment {
+    display: block;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.post .post-footer .comments-list .comment .avatar {
+    width: 35px;
+    height: 35px;
+}
+
+
+.post .post-footer .comments-list .comment .comment-heading {
+    display: block;
+    width: 100%;
+}
+
+.post .post-footer .comments-list .comment .comment-heading .user {
+    font-size: 14px;
+    font-weight: bold;
+    display: inline;
+    margin-top: 0;
+    margin-right: 10px;
+}
+
+.post .post-footer .comments-list .comment .comment-heading .time {
+    font-size: 12px;
+    color: #aaa;
+    margin-top: 0;
+    display: inline;
+}
+.post .post-footer .comments-list .comment .comment-body {
+    margin-left: 50px;
+}
+
+.post .post-footer .comments-list .comment > .comments-list {
+    margin-left: 50px;
+}
